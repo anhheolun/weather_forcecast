@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Weather Forecast</string>
+    <string name="weather_info_date">Date: %s</string>
+    <string name="weather_info_average_temp">Average Temperature: %d&#xb0;C</string>
+    <string name="weather_info_pressure">Pressure: %d</string>
+    <string name="weather_info_humidity">Humidity: %d</string>
+    <string name="weather_info_description">Description: %s</string>
+    <string name="get_weather_btn">Get Weather</string>
+    <string name="common_error">Something went wrong. Please try again</string>
+    <string name="network_error">No network connection. Please check your network</string>
+    <string name="server_error">There is technical issue in at this moment. Please try again later</string>
+    <string name="unauthorized_error">Client id invalid</string>
+    <string name="rooted_device">Your device is rooted</string>
+    <string name="close_btn">Close</string>
+
+</resources>

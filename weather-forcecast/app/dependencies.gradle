@@ -1,0 +1,58 @@
+def vers = rootProject.ext.libVersions
+
+dependencies {
+    implementation project(":domain")
+    implementation project(":data")
+
+    //Core
+    implementation "androidx.core:core-ktx:$vers.coreKtx"
+    implementation "androidx.appcompat:appcompat:$vers.appCompat"
+    implementation "com.google.android.material:material:$vers.material"
+    implementation "androidx.lifecycle:lifecycle-common-java8:$vers.lifecycleVersion"
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:$vers.lifecycleVersion"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$vers.coroutine"
+    implementation "androidx.fragment:fragment-ktx:$vers.fragmentKtx"
+    implementation "com.google.code.gson:gson:$vers.gson"
+    implementation "org.jetbrains.kotlinx:kotlinx-serialization-json:$vers.kotlinSerialization"
+
+    // AndroidX
+    implementation "androidx.coordinatorlayout:coordinatorlayout:$vers.coordinatorLayout"
+
+    //Navigation
+    implementation "androidx.navigation:navigation-fragment-ktx:$vers.navigation"
+    implementation "androidx.navigation:navigation-ui-ktx:$vers.navigation"
+    implementation "androidx.navigation:navigation-dynamic-features-fragment:$vers.navigation"
+
+    //Hilt
+    implementation "com.google.dagger:hilt-android:$vers.hilt"
+    kapt "com.google.dagger:hilt-android-compiler:$vers.hilt"
+
+    // Yaml parser
+    implementation("com.charleskorn.kaml:kaml:$vers.yamlParser")
+
+    //Fragment testing
+    debugImplementation "androidx.fragment:fragment-testing:$vers.fragmentTesting"
+
+    //Testing
+    testImplementation "androidx.arch.core:core-testing:$rootProject.ext.libVersions.coreTesting"
+    testImplementation "io.mockk:mockk:$rootProject.ext.libVersions.mockk"
+    testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:$rootProject.ext.libVersions.coroutineTest"
+
+    // Hilt testing
+    kaptAndroidTest "com.google.dagger:hilt-android:$vers.hilt"
+    androidTestImplementation "com.google.dagger:hilt-android-testing:$vers.hilt"
+
+    //retrofit
+    implementation "com.squareup.retrofit2:retrofit:$rootProject.ext.libVersions.retrofit"
+    implementation "com.squareup.retrofit2:converter-gson:$rootProject.ext.libVersions.retrofit"
+    implementation "com.squareup.okhttp3:okhttp:$rootProject.ext.libVersions.okhttp"
+    implementation "com.squareup.okhttp3:logging-interceptor:$rootProject.ext.libVersions.okhttp"
+    implementation("com.squareup.okhttp3:okhttp-tls:$rootProject.ext.libVersions.okhttp")
+
+    androidTestImplementation "androidx.test.ext:junit:$vers.junitTest"
+    androidTestImplementation "androidx.navigation:navigation-testing:$vers.navigation"
+    androidTestImplementation "com.squareup.okhttp3:mockwebserver:$vers.okhttp"
+
+    // Rooted Device
+    implementation "com.scottyab:rootbeer-lib:$rootProject.ext.libVersions.rootbeer"
+}
